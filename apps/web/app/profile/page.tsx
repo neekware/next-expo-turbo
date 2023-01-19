@@ -1,7 +1,8 @@
 "use client";
 
-import { View, Text, Button, Linking } from "react-native";
+import { View, Text, Button } from "react-native";
 import Head from "next/head";
+import { Link } from "solito/link";
 
 export default function Page() {
   return (
@@ -13,7 +14,9 @@ export default function Page() {
       </Head>
       <Text style={{ marginBottom: "10px" }}>My Profile</Text>
       <View style={{ width: "100px" }}>
-        <Button title="Profile" onPress={() => Linking.openURL("/")}></Button>
+        <Link href="/">
+          <Button title="Home" />
+        </Link>
       </View>
     </View>
   );
