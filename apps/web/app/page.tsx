@@ -1,17 +1,14 @@
 "use client";
 
-import Link from "next/link";
-import { View, Text } from "react-native";
-import { Button } from "ui";
+import { View, Text, Linking, Button } from "react-native";
 
 export default function Page() {
   return (
     <View>
-      <Text>My Profile</Text>
-
-      <Link href="/profile">
-        <Button text="Profile" />
-      </Link>
+      <Text style={{ marginBottom: "10px" }}>My Profile</Text>
+      <View style={{ width: "100px" }}>
+        <Button title="Profile" onPress={() => Linking.openURL("/")}></Button>
+      </View>
     </View>
   );
 }

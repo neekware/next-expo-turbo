@@ -1,9 +1,7 @@
 "use client";
 
-import { View, Text } from "react-native";
+import { View, Text, Button, Linking } from "react-native";
 import Head from "next/head";
-import Link from "next/link";
-import { Button } from "ui";
 
 export default function Page() {
   return (
@@ -13,11 +11,10 @@ export default function Page() {
         <meta charSet="utf-8" />
         <link rel="canonical" href="http://foobar.com/example" />
       </Head>
-      <Text>My Profile</Text>
-
-      <Link href="/">
-        <Button text="Home" />
-      </Link>
+      <Text style={{ marginBottom: "10px" }}>My Profile</Text>
+      <View style={{ width: "100px" }}>
+        <Button title="Profile" onPress={() => Linking.openURL("/")}></Button>
+      </View>
     </View>
   );
 }
