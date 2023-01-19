@@ -1,20 +1,23 @@
+"use client";
+
+import { View, Text } from "react-native";
 import Head from "next/head";
 import Link from "next/link";
 import { Button } from "ui";
 
 export default function Page() {
   return (
-    <div>
+    <View>
       <Head>
         <title>My Title</title>
         <meta charSet="utf-8" />
         <link rel="canonical" href="http://foobar.com/example" />
       </Head>
-      <h1>My Profile</h1>
+      <Text>My Profile</Text>
 
       <Link href="/">
-        <Button>Home</Button>
+        <Button text="Home" />
       </Link>
-    </div>
+    </View>
   );
 }

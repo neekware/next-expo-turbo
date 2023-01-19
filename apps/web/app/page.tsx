@@ -1,14 +1,17 @@
+"use client";
+
 import Link from "next/link";
+import { View, Text } from "react-native";
 import { Button } from "ui";
 
 export default function Page() {
   return (
-    <div>
-      <h1>Home Page</h1>
+    <View>
+      <Text>My Profile</Text>
 
       <Link href="/profile">
-        <Button>Profile</Button>
+        <Button text="Profile" />
       </Link>
-    </div>
+    </View>
   );
 }
